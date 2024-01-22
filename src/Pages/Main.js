@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
+import {CourserList} from './../List/CourserList'
 const Main = () => {
   return (
     <div
@@ -14,15 +15,12 @@ const Main = () => {
     >
       <h1 >Expand your career opportunities with OUR COURSES</h1>
       <Carousel>
-        <Carousel.Item interval={1500}>
-          <img className="d-block w-100" src="/image/1.jpg" alt="One" />
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img className="d-block w-100" src="/image/2.jpg" alt="Two" />
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img className="d-block w-100" src="/image/3.jpg" alt="Two" />
-        </Carousel.Item>
+        {CourserList.map((ele)=>(
+           <Carousel.Item interval={500}>
+           <img className="d-block w-100" src={ele.images} alt="four" />
+         </Carousel.Item>
+        ))}
+       
       </Carousel>
     </div>
   );
