@@ -1,45 +1,29 @@
 import React from "react";
-
+import "bootstrap/dist/css/bootstrap.css";
+import Carousel from "react-bootstrap/Carousel";
 const Main = () => {
   return (
     <div
-      id="carouselExampleControls"
-      className="carousel slide"
-      data-ride="carousel"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        width: "100%",
+        padding: 30,
+      }}
     >
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img className="d-block w-100" src="/Image/1.jpg" alt="First slide" />
-        </div>
-        <div className="carousel-item">
-          <img
-            className="d-block w-100"
-            src="/Image/2.jpg"
-            alt="Second slide"
-          />
-        </div>
-        <div className="carousel-item">
-          <img className="d-block w-100" src="/Image/3.jpg" alt="Third slide" />
-        </div>
-      </div>
-      <a
-        className="carousel-control-prev"
-        href="#carouselExampleControls"
-        role="button"
-        data-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="sr-only">Previous</span>
-      </a>
-      <a
-        className="carousel-control-next"
-        href="#carouselExampleControls"
-        role="button"
-        data-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="sr-only">Next</span>
-      </a>
+      <h1 >Expand your career opportunities with OUR COURSES</h1>
+      <Carousel>
+        <Carousel.Item interval={1500}>
+          <img className="d-block w-100" src="/image/1.jpg" alt="One" />
+        </Carousel.Item>
+        <Carousel.Item interval={500}>
+          <img className="d-block w-100" src="/image/2.jpg" alt="Two" />
+        </Carousel.Item>
+        <Carousel.Item interval={500}>
+          <img className="d-block w-100" src="/image/3.jpg" alt="Two" />
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 };
